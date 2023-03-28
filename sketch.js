@@ -9,12 +9,14 @@ let engine, world;
 var bg,bgImg;
 var player, shooterImg, shooter_shooting;
 var zombie;
+var bullet
 
 
 function preload(){
   
   shooterImg = loadImage("./assets/shooter_2.png")
   shooter_shooting = loadImage("./assets/shooter_3.png")
+  
 
   bgImg = loadImage("./assets/bg.jpeg")
 
@@ -53,6 +55,7 @@ function setup() {
   //criando zumbi
 
   zombie = new Zombie(800,200,100,100)
+  bullet = new Bullet(800,200,100,100)
   
 }
 
@@ -60,6 +63,7 @@ function draw() {
   background(0); 
 
   zombie.display()
+  bullet.display()
 
   console.log(zombie)
 
